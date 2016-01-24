@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* clearfix
+------------------------------------------------------------------------------*/
+.clearfix:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+/* clearfix IE6 and IE7
+------------------------------------------------------------------------------*/
+.clearfix {
+	/zoom:1;
+}
+
+/* contents
+------------------------------------------------------------------------------*/
+#contents {
+	padding-bottom:53px;
+	margin-top: 1.5em;
+}
+#contents img{
+	border:none;
+	vertical-align:bottom;
+}
+/*article*/
+#contents .article {
+	float:left;
+	width:388px;
+}
+/*items*/
+#contents .items {
+	float:right;
+	width:516px;
+}
+#contents .items2 {
+	float:right;
+	margin-top:50px;
+	width:516px;
+}
+#contents .items ul{
+	width:521px;
+	margin-right:-6px;
+}
+#contents .items li{
+	float:left;
+	width:98px;
+	padding:0 6px 6px 0;
+}
