@@ -41,7 +41,9 @@ class center extends MY_Controller {
 		 * 经销商 1 淘宝 2 微博 微信  3 实体
 		*/
 		public function dealer(){
-
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('dealers',$this->_DATA);
 		}
 		//新闻企划
 		public function newsPlan() {
@@ -56,10 +58,18 @@ class center extends MY_Controller {
 			$this->_set_view('newsacts',$this->_DATA);
 		}
 		public function aboutUs() {
-
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('aboutus',$this->_DATA);
 		}
 		public function contact() {
-
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('contact',$this->_DATA);
+		}
+		//提交联系方式
+		public function doContact() {
+			//header('Location:'.site_url('center/contact'));
 		}
 		public function address() {
 

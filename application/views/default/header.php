@@ -67,7 +67,7 @@ $(document).ready(function() {
 </script>
 <div id="R-gheader" data-uri="" data-replace-uri="?lang=EN" data-deleat-str="">
 	<div class="upper-column">
-		<a href=""><img src="<?php echo base_url()?>resource/shop/image/item/neighborhood_logo3.jpg" alt="NEIGHBORHOOD" width="200" height="75" /></a>
+		<a href="<?php echo site_url('center');?>"><img src="<?php echo base_url()?>resource/shop/image/item/neighborhood_logo3.jpg" alt="NEIGHBORHOOD" width="200" height="75" /></a>
 		<!-- <ul class="nav-Lang">
 			<li class="nowactive"><a href="">JAPANESE</a></li>
 			<li><a href="?lang=EN">ENGLISH</a></li>
@@ -88,15 +88,15 @@ $(document).ready(function() {
 			<!-- <li><a href="news_j/">NEWS & PRESS</a></li> -->
 			<li><span>经销商</span>
 				<ul>
-					<li><a href="#">淘宝</a></li>
-					<li><a href="#">微博 微信</a></li>
-					<li><a href="#">实体</a></li>
+					<li><a href="<?php echo site_url('center/dealer')?>">淘宝</a></li>
+					<li><a href="<?php echo site_url('center/dealer')?>">微博 微信</a></li>
+					<li><a href="<?php echo site_url('center/dealer')?>">实体</a></li>
 				</ul>
 			</li>
 			<li><span>更多</span>
 				<ul>
-					<li><a href="#">关于我们</a></li>
-					<li><a href="#">联系我们</a></li>
+					<li><a href="<?php echo site_url('center/aboutUs')?>">关于我们</a></li>
+					<li><a href="<?php echo site_url('center/contact')?>">联系我们</a></li>
 					<li><a href="#">地址</a></li>
 					<li><a href="#">登录</a></li>
 				</ul>

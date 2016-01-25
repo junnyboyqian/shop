@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* clearfix
+------------------------------------------------------------------------------*/
+.clearfix:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+/* clearfix IE6 and IE7
+------------------------------------------------------------------------------*/
+.clearfix {
+	/zoom:1;
+}
+
+/* contents
+------------------------------------------------------------------------------*/
+#contents {
+	padding-bottom:0px;
+	/*width:924px;*/
+	width: 780px;
+	padding-left: 144px;
+}
+#contents img{
+	border:none;
+	vertical-align:bottom;
+}
+/*article*/
+#contents .article {
+	float:left;
+	width:388px;
+}
+/*items*/
+#contents .items {
+	/*float:right;*/
+	float: left;
+	margin-left:35px;
+	margin-right:25px;
+	width:330px;
+}
+#contents .items ul{
+	width:380px;
+	margin-right:0px;
+}
+#contents .items li{
+	float:left;
+	width:185px;
+	padding:0 0px 0px 0;
+}
+#contents .items li img {
+	padding-bottom: 30px;
+}
+#dealer_textbox img {
+	border:none;
+	vertical-align:bottom;
+}
