@@ -44,12 +44,16 @@ class center extends MY_Controller {
 
 		}
 		//新闻企划
-		public function newPlan() {
-
+		public function newsPlan() {
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('newsplan',$this->_DATA);
 		}
 		//新闻活动
-		public function newActs() {
-
+		public function newsActs() {
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('newsacts',$this->_DATA);
 		}
 		public function aboutUs() {
 
@@ -67,7 +71,9 @@ class center extends MY_Controller {
 
 		}
 		public function download() {
-
+			$data = array();
+			$this->_set_data($data);
+			$this->_set_view('download',$this->_DATA);
 		}
 }
 

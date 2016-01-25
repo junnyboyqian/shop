@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+html {
+    margin: 0;
+    /* setting border: 0 hoses ie6 win window inner well border */
+    padding: 0;
+		scrollbar-base-color:#000000;
+		scrollbar-arrow-color:#FFFFFF;
+		scrollbar-shadow-color:#FFFFFF;
+		scrollbar-darkshadow-color:#000000;
+		scrollbar-3dlight-color:#000000;
+		scrollbar-highlight-color:#FFFFFF;
+		scrollbar-track-color:#FFFFFF;
+}
+
+body {
+    margin: 0;
+    /* setting border: 0 hoses ie5 win window inner well border */
+    padding: 0;
+		min-width: 924px;
+		/* text-align: center; */
+		font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+		font-size: 11px;
+		line-height:185%;
+		letter-spacing:0.1em;
+		color: #999;
+    background: #000;
+		scrollbar-base-color:#000000;
+		scrollbar-arrow-color:#FFFFFF;
+		scrollbar-shadow-color:#FFFFFF;
+		scrollbar-darkshadow-color:#000000;
+		scrollbar-3dlight-color:#000000;
+		scrollbar-highlight-color:#FFFFFF;
+		scrollbar-track-color:#FFFFFF;
+}
+
+form {
+margin: 12px 0px 12px 0px;
+padding: 0;
+}
+
+input, select, textarea {
+	color:#000000;
+	font-family: Helvetica, Arial, Osaka, "ＭＳ Ｐゴシック", sans-serif;
+	font-size: 11px;
+	background-color:#B3B3B3;
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+}
+
+a {
+	color:#FFFFFF;
+text-decoration:none;
+}
+
+a:hover{
+color:#C61E13;
+text-decoration:none;
+}
+
+
+a img { border: 0; }
+
+h1,
+h2 {
+display:none;
+}
+
+h3 {
+margin:0px 0px 4px 0px;
+}
+
+#container {
+    position: relative;
+    margin: 0 auto; /* center on everything else */
+    width: 924px;
+    text-align: left;
+		width: 924px;
+    margin-bottom: 20px;
+}
+
+.celLine{
+background-color:#ffffff;
+}
+
+.celGray{
+background-color:#000000;
+}
+
+.celBlack{
+background-color:#000;
+}
+
+.mainTitleImg{
+margin:10px 0px 0px 0px;
+}
+
+.footerCopyright{
+margin:15px 0px 15px 0px;
+font-size:9px;
+color:#ccc;
+}
+
+.entryTitleName{
+font-size:13px;
+color:#FFFFFF;
+}
+
+.entryTitleName a{
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.entryTitleName a:hover{
+color:#C61E13;
+text-decoration:underline;
+}
+
+.entryCategoryName{
+font-size:9px;
+color:#999;
+}
+
+.entryDate{
+font-size:11px;
+color:#999;
+text-transform:uppercase;
+}
+
+.entryBody{
+margin:15px 0px 0px 0px;
+}
+
+.entryBody a{
+color:#bbb;
+text-decoration:underline;
+}
+
+.entryBody a:hover{
+color:#C61E13;
+text-decoration:underline;
+}
+
+.entryBody a{
+color:#C61E13;
+text-decoration:none;
+}
+
+.entryBody a:hover {
+color:#C61E13;
+text-decoration:underline;
+}
+
+
+
+/* ナビゲーション */
+.naviTitle{
+margin:10px 0px 10px 4px;
+}
+
+.naviCategory{
+margin:10px 0px 0px 15px;
+font-size:11px;
+}
+
+.naviTopic{
+margin:0px 0px 0px 15px;
+font-size:11px;
+line-height:17px;
+}
+
+.naviArchive{
+margin:0px 0px 0px 15px;
+font-size:11px;
+line-height:17px;
+text-transform:uppercase;
+}
+
+/* トップページ */
+
+.entryNoimage {
+color:#666;
+font-size:8px;
+letter-spacing:0.15em;
+}
+
+.entryExcerpt{
+font-size:10px;
+line-height:16px;
+margin:0px 0px 0px 0px;
+}
+
+.entryExcerpt a {
+color:#C61E13;
+text-decoration:none;
+}
+
+.entryExcerpt a:hover {
+color:#C61E13;
+text-decoration:underline;
+}
+
+
+/* entryページ */
+
+.entryPrevnext{
+margin:15px 0px 0px 0px;
+}
+
+/* categoryページ */
+
+.categoryCategoryName{
+font-size:14px;
+color:#ccc;
+}
+
+/* archiveページ */
+
+.archiveDate{
+font-size:11px;
+color:#ccc;
+}
+
+/* カレンダー */
+
+.calmonlink{
+	background-color:#151515;
+}
+	
+changeMonth
+#calendar {
+    margin: 5px 0 10px;;
+    color: #444444;
+}
+
+.calendarhead {
+    padding-bottom: 5px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+}
+
+#calendar a {
+	color: #000000;
+	background-color:#333333;
+}
+
+
+#calendar table {
+    padding: 0;
+    border-collapse: collapse;
+}
+
+#calendar th {
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 9px;
+    width: 23px;
+}
+
+#calendar td {
+    padding: 2px 0;
+    text-align: center;
+    font-size: 10px;
+    line-height: 120%;
+}
+
+
+/*.today {
+    display: block;
+    border: 1px solid #890C08;
+}*/
+
+.sunday,
+.holiday {
+    color: #C61E13;
+}
+
+.holiday a:link,
+.holiday a:visited {
+    color: #C61E13;
+}
+.saturday,
+.saturday a:link,
+.saturday a:visited {
+    color: #0066CC;
+}

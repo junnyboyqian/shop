@@ -68,40 +68,47 @@ $(document).ready(function() {
 <div id="R-gheader" data-uri="" data-replace-uri="?lang=EN" data-deleat-str="">
 	<div class="upper-column">
 		<a href=""><img src="<?php echo base_url()?>resource/shop/image/item/neighborhood_logo3.jpg" alt="NEIGHBORHOOD" width="200" height="75" /></a>
-		<ul class="nav-Lang">
+		<!-- <ul class="nav-Lang">
 			<li class="nowactive"><a href="">JAPANESE</a></li>
 			<li><a href="?lang=EN">ENGLISH</a></li>
-		</ul>
+		</ul> -->
 	</div>
 	<div class="lower-column">
 		<ul class="nav-Mainmenu">
-			<li><span>COLLECTION</span>
+			<li><span>产品</span>
 				<ul>
-					<li><a href="collection.html">LOOK</a></li>
-					<li><a href="catalog/style/">STYLE</a></li>
-					<li><a href="catalog/item/">ITEM</a></li>
-					<li><a href="archive.html">ARCHIVE</a></li>
+					<li><a href="<?php echo site_url('center/searchGoods')?>">街拍</a></li>
+					<li><a href="#">视频</a></li>
+					<li><a href="<?php echo site_url('center/searchGoods')?>">产品</a></li>
+					<li><a href="<?php echo site_url('center/download')?>">下载</a></li>
 				</ul>
 			</li>
-			<li><a href="delivery_j/">DELIVERY</a></li>
-			<li><a href="weblog_j/">WEBLOG</a></li>
-			<li><a href="news_j/">NEWS & PRESS</a></li>
-			<li><a href="dealers/index.html">DEALERS</a></li>
-			<li><span>MORE</span>
+			<li><a href="<?php echo site_url('center/newsPlan')?>">新闻企划</a></li>
+			<li><a href="<?php echo site_url('center/newsActs')?>">新闻活动</a></li>
+			<!-- <li><a href="news_j/">NEWS & PRESS</a></li> -->
+			<li><span>经销商</span>
 				<ul>
-					<li><a href="aboutus.html">ABOUT US</a></li>
-					<li><a href="contact.php">CONTACT</a></li>
-					<li><a href="main.php">NEWSLETTER</a></li>
+					<li><a href="#">淘宝</a></li>
+					<li><a href="#">微博 微信</a></li>
+					<li><a href="#">实体</a></li>
+				</ul>
+			</li>
+			<li><span>更多</span>
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">地址</a></li>
+					<li><a href="#">登录</a></li>
 				</ul>
 			</li>
 		</ul>
 
-		<ul class="nav-Exlinks">
+		<!-- <ul class="nav-Exlinks">
 			<li><a href="#" target="_blank"><img src="<?php echo base_url()?>resource/shop/image/item/icon_header_insta.jpg" alt="INSTAGRAM BY NEIGHBORHOOD" width="34" height="48" border="0" /></a></li>
 			<li><a href="#" target="_blank"><img src="<?php echo base_url()?>resource/shop/image/item/icon_header_twitter.jpg" alt="TWITTER BY NEIGHBORHOOD" width="34" height="48" border="0" /></a></li>
 			<li><a href="#" target="_blank"><img src="<?php echo base_url()?>resource/shop/image/item/icon_header_lk.jpg" alt="LUKER BY NEIGHBORHOOD" width="120" height="48" border="0" /></a></li>
 			<li><a href="#" target="_blank"><img src="<?php echo base_url()?>resource/shop/image/item/icon_header_webstore.jpg" alt="NEIGHBORHOOD WEB STORE" width="128" height="48" border="0" /></a></li>
-		</ul>
+		</ul> -->
 	</div>
 </div>
 <!--/ GHEADER INC /-->
