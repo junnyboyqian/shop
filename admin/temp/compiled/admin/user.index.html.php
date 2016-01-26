@@ -1,30 +1,30 @@
 <?php echo $this->fetch('header.html'); ?>
 <div id="rightTop">
-  <p>会员管理</p>
+  <p>管理员</p>
   <ul class="subnav">
     <li><span>管理</span></li>
-    <li><a class="btn1" href="index.php?app=user&amp;act=add">新增</a></li>
+    <!-- <li><a class="btn1" href="index.php?app=user&amp;act=add">新增</a></li> -->
   </ul>
 </div>
 
 <div class="mrightTop">
   <div class="fontl">
-    <form method="get">
-       <div class="left">
-          <input type="hidden" name="app" value="user" />
-          <input type="hidden" name="act" value="index" />
-          <select class="querySelect" name="field_name"><?php echo $this->html_options(array('options'=>$this->_var['query_fields'],'selected'=>$_GET['field_name'])); ?>
-          </select>
-          <input class="queryInput" type="text" name="field_value" value="<?php echo htmlspecialchars($_GET['field_value']); ?>" />
-          排序:
-          <select class="querySelect" name="sort"><?php echo $this->html_options(array('options'=>$this->_var['sort_options'],'selected'=>$_GET['sort'])); ?>
-          </select>
-          <input type="submit" class="formbtn" value="查询" />
-      </div>
-      <?php if ($this->_var['filtered']): ?>
-      <a class="left formbtn1" href="index.php?app=user">撤销检索</a>
-      <?php endif; ?>
-    </form>
+   <!--  <form method="get">
+      <div class="left">
+         <input type="hidden" name="app" value="user" />
+         <input type="hidden" name="act" value="index" />
+         <select class="querySelect" name="field_name"><?php echo $this->html_options(array('options'=>$this->_var['query_fields'],'selected'=>$_GET['field_name'])); ?>
+         </select>
+         <input class="queryInput" type="text" name="field_value" value="<?php echo htmlspecialchars($_GET['field_value']); ?>" />
+         排序:
+         <select class="querySelect" name="sort"><?php echo $this->html_options(array('options'=>$this->_var['sort_options'],'selected'=>$_GET['sort'])); ?>
+         </select>
+         <input type="submit" class="formbtn" value="查询" />
+     </div>
+     <?php if ($this->_var['filtered']): ?>
+     <a class="left formbtn1" href="index.php?app=user">撤销检索</a>
+     <?php endif; ?>
+   </form> -->
   </div>
   <div class="fontr"><?php echo $this->fetch('page.top.html'); ?></div>
 </div>
@@ -39,7 +39,6 @@
       <td><span ectype="order_by" fieldname="reg_time">注册时间</span></td>
       <td><span ectype="order_by" fieldname="last_login">最后登录</span></td>
       <td><span ectype="order_by" fieldname="logins">登录次数</span></td>
-      <td>是否是管理员</td>
       <td class="handler">操作</td>
     </tr>
     <?php endif; ?>
@@ -58,15 +57,9 @@
       <td><?php if ($this->_var['user']['last_login']): ?><?php echo local_date("Y-m-d",$this->_var['user']['last_login']); ?><?php endif; ?><br />
         <?php echo $this->_var['user']['last_ip']; ?></td>
       <td><?php echo $this->_var['user']['logins']; ?></td>
-      <td><?php if ($this->_var['user']['if_admin']): ?>  是
-      <?php else: ?><a href="index.php?app=admin&amp;act=add&amp;id=<?php echo $this->_var['user']['user_id']; ?>" onclick="parent.openItem('admin_manage', 'user');">设为管理员</a><?php endif; ?>
-      </td>
       <td class="handler">
-      <span style="width: 100px">
-      <a href="index.php?app=user&amp;act=edit&amp;id=<?php echo $this->_var['user']['user_id']; ?>">编辑</a> | <a href="javascript:drop_confirm('你确定要删除它吗？该操作不会删除ucenter及其他整合应用中的用户', 'index.php?app=user&amp;act=drop&amp;id=<?php echo $this->_var['user']['user_id']; ?>');">删除</a>
-        <?php if ($this->_var['user']['store_id']): ?>
-        | <a href="index.php?app=store&amp;act=edit&amp;id=<?php echo $this->_var['user']['store_id']; ?>" onclick="parent.openItem('store_manage', 'store');">店铺</a>
-        <?php endif; ?>
+      <span style="width: 100px;text-align:center">
+      <a href="index.php?app=user&amp;act=edit&amp;id=<?php echo $this->_var['user']['user_id']; ?>">编辑</a>
       </span>
       </td>
     </tr>
@@ -79,7 +72,7 @@
   <?php if ($this->_var['users']): ?>
   <div id="dataFuncs">
     <div id="batchAction" class="left paddingT15"> &nbsp;&nbsp;
-      <input class="formbtn batchButton" type="button" value="删除" name="id" uri="index.php?app=user&act=drop" presubmit="confirm('你确定要删除它吗？该操作不会删除ucenter及其他整合应用中的用户');" />
+      <!-- <input class="formbtn batchButton" type="button" value="删除" name="id" uri="index.php?app=user&act=drop" presubmit="confirm('确定删除吗？');" /> -->
     </div>
     <div class="pageLinks"><?php echo $this->fetch('page.bottom.html'); ?></div>
     <div class="clear"></div>

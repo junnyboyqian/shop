@@ -153,14 +153,14 @@ class GcategoryBModel extends GcategoryModel
         return parent::edit($conditions, $edit_data);
     }
 
-    function drop($conditions, $fields = 'ad_image,root_image,cate_image')
+    function drop($conditions, $fields = '') //ad_image,root_image,cate_image
     {
         $this->clear_cache();
         $droped_rows = parent::drop($conditions, $fields);
         if ($droped_rows)
         {
             restore_error_handler();
-            $droped_data = $this->getDroppedData();
+            /*$droped_data = $this->getDroppedData();
             foreach ($droped_data as $key => $value)
             {
                 if ($value['ad_image'])
@@ -175,7 +175,7 @@ class GcategoryBModel extends GcategoryModel
                 {
                     @unlink(ROOT_PATH . '/' . $value['cate_image']);  //删除Logo文件
                 }
-            }
+            }*/
             reset_error_handler();
         }
         return $droped_rows;

@@ -20,7 +20,7 @@ $(function(){
 </head>
 <body>
 <div id="enter">
-    <h1><img alt="{$lang.ecmall_admin}" height="56" src="templates/style/images/enter_admin_logo.jpg" /></h1>
+    <h1 style="height:56px;"><!-- <img alt="{* $lang.ecmall_admin *}" height="56" src="templates/style/images/enter_admin_logo.jpg" /> --></h1>
     <table>
     <form method="post">
         <tr>
@@ -41,8 +41,8 @@ $(function(){
             <th  colspan="4">
             <input class="btnEnter" type="submit" name="" value="" />
             <input class="btnBack" type="button" name="" value="" onclick="go('{$site_url}')"/>
-            <input class="btnBorget" type="button" name="" value="" onclick="go('{$site_url}/index.php?app=find_password')"/>
-            <p>&copy;Powered by SinoGo</p>
+            <!-- <input class="btnBorget" type="button" name="" value="" onclick="go('{* $site_url *}/index.php?app=find_password')"/> -->
+            <!-- <p>&copy;Powered by SinoGo</p> -->
             </th>
         </tr>
     </form>

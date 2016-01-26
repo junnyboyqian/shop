@@ -4,7 +4,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=<?php echo $this->_var['charset']; ?>" />
 <meta http-equiv="Content-Type" content="text/html;charset=<?php echo $this->_var['charset']; ?>" />
-<title>商城后台 -- Powered by SinoGo</title>
+<title>管理后台</title>
 <link href="templates/style/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?php echo $this->lib_base . "/" . 'jquery.js'; ?>" charset="utf-8"></script>
 <script type="text/javascript" src="<?php echo $this->lib_base . "/" . 'mozhi.js'; ?>" charset="utf-8"></script>
@@ -35,7 +35,8 @@ var menu = <?php echo $this->_var['menu_json']; ?>;
     <div class="close_float"><img src="templates/style/images/close2.gif" /></div>
 </div>
 <div id="head">
-    <div id="logo"><a href="index.php"><img width="168" height="68" src="templates/style/images/sinogo_admin.png" alt="SinoGo" /></a></div>
+    <!-- <div id="logo" style="font-size:35px;color:blue;text-align:center;line-height:60px;">管理后台</div> -->
+    <div id="logo"><a href="index.php"><img width="168" height="68" src="templates/style/images/sinogo_admin.png" /></a></div>
     <div id="menu"><span>您好，<strong><?php echo $this->_var['visitor']['user_name']; ?></strong> <a href="index.php?act=logout">[退出]</a> <!-- <a href="<?php echo $this->_var['site_url']; ?>/index.php" target="_blank">[商城首页]</a> --></span>
     <a href="javascript:;" class="menu_btn1" id="iframe_refresh">刷新</a>
     <!-- <a href="javascript:;" class="menu_btn2" id="clear_cache">更新缓存</a> -->

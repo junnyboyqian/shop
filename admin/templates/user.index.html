@@ -1,30 +1,30 @@
 {include file="header.html"}
 <div id="rightTop">
-  <p>{$lang.user}</p>
+  <p>管理员</p>
   <ul class="subnav">
     <li><span>{$lang.manage}</span></li>
-    <li><a class="btn1" href="index.php?app=user&amp;act=add">{$lang.add}</a></li>
+    <!-- <li><a class="btn1" href="index.php?app=user&amp;act=add">{$lang.add}</a></li> -->
   </ul>
 </div>
 
 <div class="mrightTop">
   <div class="fontl">
-    <form method="get">
-       <div class="left">
-          <input type="hidden" name="app" value="user" />
-          <input type="hidden" name="act" value="index" />
-          <select class="querySelect" name="field_name">{html_options options=$query_fields selected=$smarty.get.field_name}
-          </select>
-          <input class="queryInput" type="text" name="field_value" value="{$smarty.get.field_value|escape}" />
-          {$lang.sort_order}:
-          <select class="querySelect" name="sort">{html_options options=$sort_options selected=$smarty.get.sort}
-          </select>
-          <input type="submit" class="formbtn" value="{$lang.query}" />
-      </div>
-      <!--{if $filtered}-->
-      <a class="left formbtn1" href="index.php?app=user">{$lang.cancel_query}</a>
-      <!--{/if}-->
-    </form>
+   <!--  <form method="get">
+      <div class="left">
+         <input type="hidden" name="app" value="user" />
+         <input type="hidden" name="act" value="index" />
+         <select class="querySelect" name="field_name">{html_options options=$query_fields selected=$smarty.get.field_name}
+         </select>
+         <input class="queryInput" type="text" name="field_value" value="{$smarty.get.field_value|escape}" />
+         {$lang.sort_order}:
+         <select class="querySelect" name="sort">{html_options options=$sort_options selected=$smarty.get.sort}
+         </select>
+         <input type="submit" class="formbtn" value="{$lang.query}" />
+     </div>
+     {if $filtered}
+     <a class="left formbtn1" href="index.php?app=user">{$lang.cancel_query}</a>
+     {/if}
+   </form> -->
   </div>
   <div class="fontr">{include file=page.top.html}</div>
 </div>
@@ -39,7 +39,6 @@
       <td><span ectype="order_by" fieldname="reg_time">{$lang.reg_time}</span></td>
       <td><span ectype="order_by" fieldname="last_login">{$lang.last_login}</span></td>
       <td><span ectype="order_by" fieldname="logins">{$lang.logins}</span></td>
-      <td>{$lang.if_admin}</td>
       <td class="handler">{$lang.handler}</td>
     </tr>
     <!--{/if}-->
@@ -56,15 +55,9 @@
       <td><!--{if $user.last_login}-->{$user.last_login|date}<!--{/if}--><br />
         {$user.last_ip}</td>
       <td>{$user.logins}</td>
-      <td><!--{if $user.if_admin}-->  {$lang.yes}
-      <!--{else}--><a href="index.php?app=admin&amp;act=add&amp;id={$user.user_id}" onclick="parent.openItem('admin_manage', 'user');">{$lang.admin}</a><!--{/if}-->
-      </td>
       <td class="handler">
-      <span style="width: 100px">
-      <a href="index.php?app=user&amp;act=edit&amp;id={$user.user_id}">{$lang.edit}</a> | <a href="javascript:drop_confirm('{$lang.drop_confirm}', 'index.php?app=user&amp;act=drop&amp;id={$user.user_id}');">{$lang.drop}</a>
-        <!-- {if $user.store_id} -->
-        | <a href="index.php?app=store&amp;act=edit&amp;id={$user.store_id}" onclick="parent.openItem('store_manage', 'store');">{$lang.store}</a>
-        <!-- {/if} -->
+      <span style="width: 100px;text-align:center">
+      <a href="index.php?app=user&amp;act=edit&amp;id={$user.user_id}">{$lang.edit}</a>
       </span>
       </td>
     </tr>
@@ -77,7 +70,7 @@
   <!--{if $users}-->
   <div id="dataFuncs">
     <div id="batchAction" class="left paddingT15"> &nbsp;&nbsp;
-      <input class="formbtn batchButton" type="button" value="{$lang.drop}" name="id" uri="index.php?app=user&act=drop" presubmit="confirm('{$lang.drop_confirm}');" />
+      <!-- <input class="formbtn batchButton" type="button" value="删除" name="id" uri="index.php?app=user&act=drop" presubmit="confirm('确定删除吗？');" /> -->
     </div>
     <div class="pageLinks">{include file=page.bottom.html}</div>
     <div class="clear"></div>

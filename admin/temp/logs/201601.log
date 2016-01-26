@@ -99,3 +99,16 @@ Fri, 15 Jan 2016 10:58:54 +0000	[2]mysql_fetch_array() expects parameter 1 to be
 Fri, 15 Jan 2016 10:59:13 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
 Fri, 15 Jan 2016 10:59:53 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
 Sat, 23 Jan 2016 15:22:36 +0100	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 06:43:46 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 07:02:43 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 07:05:49 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 07:06:02 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 07:06:14 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:05:18 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:12:48 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:13:24 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:13:35 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:39:10 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 08:55:26 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 09:51:56 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Tue, 26 Jan 2016 09:56:01 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225

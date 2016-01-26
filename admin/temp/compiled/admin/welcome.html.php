@@ -12,7 +12,7 @@ alert(dangerous_apps);
 </script>
 <div id="rightTop">
 <p>
-    您好，<b><?php echo $this->_var['admin']['user_name']; ?></b>，欢迎使用 SinoGo后台管理系统。
+    您好，<b><?php echo $this->_var['admin']['user_name']; ?></b>，欢迎使用后台管理系统。
     <!--[ <a target="_blank" href="<?php echo $this->_var['site_url']; ?>/index.php?app=message&amp;act=inbox" class="tidings">新消息</a>: <?php echo $this->_var['new']['total']; ?> ]
 -->    您上次登录的时间是 <?php echo local_date("Y-m-d H:i:s",$this->_var['admin']['last_login']); ?> ，IP 是 <?php echo $this->_var['admin']['last_ip']; ?>
 </p>

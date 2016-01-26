@@ -4,11 +4,55 @@ return array(
     'dashboard' => array(
         'text'      => Lang::get('dashboard'),
         'subtext'   => Lang::get('offen_used'),
-        'default'   => 'welcome',
+        'default'   => 'user_manage',
         'children'  => array(
-            'welcome'   => array(
+            /*'welcome'   => array(
                 'text'  => Lang::get('welcome_page'),
                 'url'   => 'index.php?act=welcome',
+            ),*/
+            'user_manage' => array(
+                'text'  => '管理员',
+                'url'   => 'index.php?app=user',
+            ),
+            /*'admin_manage' => array(
+                'text' => Lang::get('admin_manage'),
+                 'url'   => 'index.php?app=admin',
+             ),*/
+            'gcategory' => array(
+                'text'  => Lang::get('gcategory'),
+                'url'   => 'index.php?app=gcategory',
+            ),
+            'ad' => array(
+                'text'  => '轮播图管理',
+                'url'   => 'index.php?app=ad',
+            ),
+            'dress' => array(
+                'text'  => '形象目录',
+                'url'   => 'index.php?app=dress',
+            ),
+            'product' => array(
+                'text'  => '产品专辑',
+                'url'   => 'index.php?app=product',
+            ),
+            'dealer' => array(
+                'text'  => '经销商管理',
+                'url'   => 'index.php?app=dealer',
+            ),
+            'download' => array(
+                'text'  => '下载管理',
+                'url'   => 'index.php?app=download',
+            ),
+            'contact' => array(
+                'text'  => '客户建议',
+                'url'   => 'index.php?app=contact',
+            ),
+            'acategory' => array(
+                'text'  => Lang::get('acategory'),
+                'url'   => 'index.php?app=acategory',
+            ),
+            'article' => array(
+                'text'  => Lang::get('article'),
+                'url'   => 'index.php?app=article',
             ),
             /*'aboutus'   => array(
                 'text'  => Lang::get('aboutus_page'),
@@ -19,26 +63,17 @@ return array(
                 'text'  => Lang::get('base_setting'),
                 'url'   => 'index.php?app=setting&act=base_setting',
             ),*/
-            'user_manage' => array(
-                'text'  => Lang::get('user_manage'),
-                'parent'=> 'user',
-                'url'   => 'index.php?app=user',
-            ),
+            
             /*'store_manage'  => array(
                 'text'  => Lang::get('store_manage'),
                 'parent'=> 'store',
                 'url'   => 'index.php?app=store',
-            ),*/
-            'goods_manage'  => array(
-                'text'  => Lang::get('goods_manage'),
-                'parent'=> 'goods',
-                'url'   => 'index.php?app=goods',
             ),
             'order_manage' => array(
                 'text'  => Lang::get('order_manage'),
                 'parent'=> 'trade',
                 'url'   => 'index.php?app=order'
-            ),
+            ),*/
         ),
     ),
     // 设置
@@ -70,7 +105,7 @@ return array(
     ),*/
     // 商品
     'goods' => array(
-        'text'      => Lang::get('goods'),
+        'text'      => '产品',
         'default'   => 'goods_manage',
         'children'  => array(
             'gcategory' => array(
@@ -78,21 +113,21 @@ return array(
                 'url'   => 'index.php?app=gcategory',
             ),
             'ad' => array(
-                'text'  => '广告管理',
+                'text'  => '轮播图管理',
                 'url'   => 'index.php?app=ad',
             ),
-            'brand' => array(
+            /*'brand' => array(
                 'text'  => Lang::get('brand'),
                 'url'   => 'index.php?app=brand',
-            ),
+            ),*/
             'goods_manage' => array(
-                'text'  => Lang::get('goods_manage'),
+                'text'  => '产品专辑',
                 'url'   => 'index.php?app=goods',
             ),
-            'recommend_type' => array(
+            /*'recommend_type' => array(
                 'text'  => LANG::get('recommend_type'),
                 'url'   => 'index.php?app=recommend'
-            ),
+            ),*/
         ),
     ),
     // 店铺

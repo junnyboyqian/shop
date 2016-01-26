@@ -84,7 +84,7 @@ $(function(){
                 <td class="paddingT15 wordSpacing5">
                     <select id="parent_id" name="parent_id"><option value="0">请选择...</option><?php echo $this->html_options(array('options'=>$this->_var['parents'],'selected'=>$this->_var['gcategory']['parent_id'])); ?></select> <label class="field_notice">上级分类</label>               </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th class="paddingT15">
                     根类图片:</th>
                 <td class="paddingT15 wordSpacing5">
@@ -134,7 +134,7 @@ $(function(){
                 <img src="<?php echo $this->_var['gcategory']['ad_image']; ?>" class="makesmall" max_width="120" max_height="90" />
                 </td>
             </tr>
-            <?php endif; ?>
+            <?php endif; ?> -->
             <tr>
                 <th class="paddingT15">
                     排序:</th>

@@ -8,8 +8,8 @@
 <link href="templates/style/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 //<!CDATA[
-var SITE_URL = "<?php echo $this->_var['site_url']; ?>";
-var REAL_SITE_URL = "<?php echo $this->_var['real_site_url']; ?>";
+var SITE_URL = "<?php echo $this->_var['real_backend_url']; ?>";
+var REAL_SITE_URL = "<?php echo $this->_var['real_backend_url']; ?>";
 var REAL_BACKEND_URL = "<?php echo $this->_var['real_backend_url']; ?>";
 //]]>
 </script>

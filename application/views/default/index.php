@@ -108,30 +108,24 @@ $(document).ready(function() {
 	</div>
 	<div class="lower-column">
 		<ul class="nav-Mainmenu">
-			<li><span>产品</span>
+			<li><span>集合</span>
 				<ul>
-					<li><a href="<?php echo site_url('center/searchGoods')?>">街拍</a></li>
-					<li><a href="#">视频</a></li>
-					<li><a href="<?php echo site_url('center/searchGoods')?>">产品</a></li>
-					<li><a href="<?php echo site_url('center/download')?>">下载</a></li>
+					<li><a href="<?php echo site_url('center/searchGoods')?>">形象目录</a></li>
+					<li><a href="#">形象视频</a></li>
+					<li><a href="<?php echo site_url('center/searchGoods')?>">产品专辑</a></li>
+					<!-- <li><a href="<?php echo site_url('center/download')?>">下载</a></li> -->
 				</ul>
 			</li>
 			<li><a href="<?php echo site_url('center/newsPlan')?>">新闻企划</a></li>
 			<li><a href="<?php echo site_url('center/newsActs')?>">新闻活动</a></li>
 			<!-- <li><a href="news_j/">NEWS & PRESS</a></li> -->
-			<li><span>经销商</span>
-				<ul>
-					<li><a href="<?php echo site_url('center/dealer')?>">淘宝</a></li>
-					<li><a href="<?php echo site_url('center/dealer')?>">微博 微信</a></li>
-					<li><a href="<?php echo site_url('center/dealer')?>">实体</a></li>
-				</ul>
-			</li>
+			<li><a href="<?php echo site_url('center/dealer')?>">经销商</a></li>
 			<li><span>更多</span>
 				<ul>
 					<li><a href="<?php echo site_url('center/aboutUs')?>">关于我们</a></li>
 					<li><a href="<?php echo site_url('center/contact')?>">联系我们</a></li>
 					<li><a href="#">地址</a></li>
-					<li><a href="#">登录</a></li>
+					<li><a href="#">账户</a></li>
 				</ul>
 			</li>
 		</ul>

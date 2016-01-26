@@ -74,13 +74,13 @@ $(function(){
   <p>会员管理</p>
   <ul class="subnav">
     <li><a class="btn1" href="index.php?app=user">管理</a></li>
-    <li>
-      <?php if ($this->_var['user']['user_id']): ?>
-      <a class="btn1" href="index.php?app=user&amp;act=add">新增</a>
-      <?php else: ?>
-      <span>新增</span>
-      <?php endif; ?>
-    </li>
+ <!--    <li>
+   <?php if ($this->_var['user']['user_id']): ?>
+   <a class="btn1" href="index.php?app=user&amp;act=add">新增</a>
+   <?php else: ?>
+   <span>新增</span>
+   <?php endif; ?>
+ </li> -->
   </ul>
 </div>
 <div class="info">

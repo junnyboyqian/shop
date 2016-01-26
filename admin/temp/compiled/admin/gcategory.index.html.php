@@ -5,8 +5,8 @@
     <ul class="subnav">
         <li><span>管理</span></li>
         <li><a class="btn1" href="index.php?app=gcategory&amp;act=add">新增</a></li>
-        <li><a class="btn1" href="index.php?app=gcategory&amp;act=export">导出</a></li>
-        <li><a class="btn1" href="index.php?app=gcategory&amp;act=import">导入</a></li>
+        <!-- <li><a class="btn1" href="index.php?app=gcategory&amp;act=export">导出</a></li>
+        <li><a class="btn1" href="index.php?app=gcategory&amp;act=import">导入</a></li> -->
     </ul>
 </div>
 

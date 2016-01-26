@@ -38,7 +38,7 @@ SESSION_MEMCACHED : 存储session数据的memcached服务器(服务器地址1:�
 
 return array (
   'SITE_URL' => 'http://localhost/shop',
-  'DB_CONFIG' => 'mysql://root:123456@localhost:3306/shop',
+  'DB_CONFIG' => 'mysql://root:junnybf@localhost:3306/shop',
   'DB_PREFIX' => 'sh_',
   'LANG' => 'sc-utf-8',
   'COOKIE_DOMAIN' => '',

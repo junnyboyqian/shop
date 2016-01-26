@@ -41,6 +41,6 @@ window.setTimeout("<?php echo $this->_var['redirect']; ?>", 5000);
 //-->
 </script>
 <?php endif; ?>
-<p>Copyright Sinogo.hk,All rights reserved.</p>
+<!-- <p>Copyright Sinogo.hk,All rights reserved.</p> -->
 </body>
 </html>
