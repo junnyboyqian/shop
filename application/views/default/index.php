@@ -21,9 +21,8 @@
 <script type="text/javascript" src="<?php echo base_url()?>resource/shop/css/theme/supersized.shutter.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>resource/shop/js/common.js"></script>
 <script type="text/javascript">
-			
+			var slides = <?php echo $slides;?>; //不能加双引号 否则变为字符串
 			jQuery(function($){
-				
 				$.supersized({
 				
 					// Functionality
@@ -34,16 +33,11 @@
 					// Components							
 					new_window				:	0,
 					slide_links				:	'num',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-					slides 					:  	[			// Slideshow Images
+					/*slides 					:  	[			// Slideshow Images
                             {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-1.jpg', title : 'Image Credit: svg', thumb : '', url : 'catalog/2015aw/item/jackets/nb_b-10_cn-jkt.html'},
-                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-2.jpg', title : 'Image Credit: svg', thumb : '', url : ''},
-                            /*{image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-3.jpg', title : 'Image Credit: svg', thumb : '', url : 'catalog/2015aw/item/jackets/nb_b-10_cn-jkt.html'},
-                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-4.jpg', title : 'Image Credit: svg', thumb : '', url : ''},
-                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-5.jpg', title : 'Image Credit: svg', thumb : '', url : 'catalog/2015aw/item/jackets/nb_b-10_cn-jkt.html'},
-                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-6.jpg', title : 'Image Credit: svg', thumb : '', url : 'catalog/2015aw/item/jackets/nb_b-10_cn-jkt.html'},
-                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-7.jpg', title : 'Image Credit: svg', thumb : '', url : 'catalog/2015aw/item/jackets/nb_b-10_cn-jkt.html'}*/
-														 
-						]
+                            {image : '<?php echo base_url()?>resource/shop/image/top/2015aw/top_02-2.jpg', title : 'Image Credit: svg', thumb : '', url : ''}								 
+						]*/
+					slides : slides,
 					
 				});
 		    });

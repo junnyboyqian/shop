@@ -33,14 +33,32 @@ class ProductApp extends BackendApp
         //更新排序
         $sort  = 'pro_id';
         $order = 'desc';
-        $pros = $this->_pro_mod->find(array(
-        'order'         => "$sort $order",
-        'count'         => true
+        $field = 'pro_name';
+        $conditions = $this->_get_query_conditions(array(array(
+                'field' => $field,       //按用户名,店铺名,支付方式名称进行搜索
+                'equal' => 'LIKE',
+                'name'  => 'pro_name',
+            )
         ));
-        /*foreach ($pros as $key => $ad)
-        {
-            $ad['pro_img']&&$pros[$key]['pro_img'] = dirname(site_url()) . '/' . $ad['pro_img'];
-        }*/
+        $page = $this->_get_page(); // 方法中参数为 每页显示的记录数
+        $pros = $this->_pro_mod->find(array(
+            'conditions'    => '1=1 ' . $conditions,
+            'limit'         => $page['limit'],  //获取当前页的数据
+            'order'         => "$sort $order",
+            'count'         => true             //允许统计
+        ));
+        $sql = "select cate_id,cate_name from sh_gcategory where parent_id = 5";
+        $arr_cates = $this->_pro_mod->getAll($sql);
+        $cates = array();
+        foreach ($arr_cates as $key => $val) {
+            $cates[$val[cate_id]] = $val['cate_name'];
+        }
+        foreach ($pros as $key => $val) {
+          $pros[$key]['cate'] = $cates[$val[cate_id]];
+        }
+        $page['item_count'] = $this->_pro_mod->getCount();
+        $this->_format_page($page);
+        $this->assign('page_info', $page);
         /* 导入jQuery的表单验证插件 */
         $this->import_resource(array(
             'script' => 'jqtreetable.js,inline_edit.js',
@@ -63,6 +81,13 @@ class ProductApp extends BackendApp
             $this->import_resource(array(
                 'script' => 'jquery.plugins/jquery.validate.js'
             ));
+            $sql = "select cate_id,cate_name from sh_gcategory where parent_id = 5";
+            $arr_cates = $this->_pro_mod->getAll($sql);
+            $cates = array();
+            foreach ($arr_cates as $key => $val) {
+                $cates[$val[cate_id]] = $val['cate_name'];
+            }
+            $this->assign('cates', $cates);
             $this->display('product.form.html');
         }
         else
@@ -82,8 +107,8 @@ class ProductApp extends BackendApp
                 return;
             }
             $this->show_message('添加成功！',
-                'back_list',    'index.php?app=product',
-                'continue_prod', 'index.php?app=product&amp;act=add'
+                '返回产品列表',    'index.php?app=product',
+                '继续添加', 'index.php?app=product&amp;act=add'
             );
         }
     }
@@ -115,13 +140,20 @@ class ProductApp extends BackendApp
             $this->import_resource(array(
                 'script' => 'jquery.plugins/jquery.validate.js'
             ));
+            $sql = "select cate_id,cate_name from sh_gcategory where parent_id = 5";
+            $arr_cates = $this->_pro_mod->getAll($sql);
+            $cates = array();
+            foreach ($arr_cates as $key => $val) {
+                $cates[$val[cate_id]] = $val['cate_name'];
+            }
+            $this->assign('cates', $cates);
             $this->assign('product', $product);
             $this->display('product.form.html');
         }
         else
         {
             $data = array();
-            //$data['cate_id']     = $_POST['cate_id'];
+            $data['cate_id']     = $_POST['cate_id'];
             $data['pro_name']     = $_POST['pro_name'];
             $data['fabric']     = $_POST['fabric'];
             $data['color']     = $_POST['color'];
@@ -136,8 +168,8 @@ class ProductApp extends BackendApp
             }
 
             $this->show_message('修改成功',
-                'back_list',        'index.php?app=product',
-                'edit_again',    'index.php?app=product&amp;act=edit&amp;id=' . $pro_id);
+                '返回产品列表',        'index.php?app=product',
+                '继续修改',    'index.php?app=product&amp;act=edit&amp;id=' . $pro_id);
         }
     }  
 

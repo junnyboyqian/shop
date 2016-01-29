@@ -6,27 +6,47 @@
         <li><a class="btn1" href="index.php?app=product&amp;act=add">新增</a></li>
     </ul>
 </div>
+<div class="mrightTop">
+    <div class="fontl">
+        <form method="get">
+             <div class="left">
+                <input type="hidden" name="app" value="product" />
+                <input type="hidden" name="act" value="index" />
+                产品名称:<input class="queryInput" type="text" name="pro_name" value="{$query.pro_name|escape}" />
+                <input type="submit" class="formbtn" value="{$lang.query}" />
+            </div>
+            <!--{if $filtered}-->
+            <a class="left formbtn1" href="index.php?app=product">{$lang.cancel_query}</a>
+            <!--{/if}-->
+        </form>
+    </div>
+    <div class="fontr">
+        {if $pros}{include file=page.top.html}{/if}
+    </div>
+</div>
 <div class="tdare">
     <table width="100%" cellspacing="0" class="dataTable">
         <!--{if $pros}-->
         <tr class="tatr1">
             <td width="20" class="firstCell"><input type="checkbox" class="checkall" /></td>
+            <td align="left"><span>货号</span></td>
             <td align="left"><span>产品名称</span></td>
             <td align="left"><span>分类</span></td>
-            <td align="left"><span>货号</span></td>
             <td align="left"><span>材质</span></td>
+            <td align="left"><span>添加时间</span></td>
             <td >操作</td>
         </tr>
         <!--{/if}-->
         <!--{foreach from=$pros item=ad}-->
         <tr class="tatr2">
             <td class="firstCell"><input value="{$ad.pro_id}" class='checkitem' type="checkbox" /></td>
+            <td align="left"><span>{$ad.pdt_no}<span></td>
             <td align="left"><span>{$ad.pro_name|escape}</span></td>
             <td align="left"><span>{$ad.cate}<span></td>
-            <td align="left"><span>{$ad.pdt_no}<span></td>
             <td align="left"><span>{$ad.fabric}</span></td>
+            <td style="width:200px;" align="left"><span>{$ad.add_time|date:complete}</span></td>
             <td style="width:200px;">
-            <a href="index.php?app=pimage&amp;act=edit&amp;id={$ad.pro_id}">产品图片</a>  | <a href="index.php?app=product&amp;act=edit&amp;id={$ad.pro_id}">编辑</a>  |  <a name="drop" href="javascript:drop_confirm('确定删除吗？', 'index.php?app=product&amp;act=drop&amp;id={$ad.pro_id}');">删除</a>
+            <a href="index.php?app=pimage&amp;act=index&amp;id={$ad.pro_id}">产品图片</a>  | <a href="index.php?app=product&amp;act=edit&amp;id={$ad.pro_id}">编辑</a>  |  <a name="drop" href="javascript:drop_confirm('确定删除吗？', 'index.php?app=product&amp;act=drop&amp;id={$ad.pro_id}');">删除</a>
             </td>
         </tr>
         <!--{foreachelse}-->
@@ -35,6 +55,11 @@
         </tr>
         <!--{/foreach}-->
     </table>
+    <div id="dataFuncs">
+        <div class="pageLinks">
+            {if $pros}{include file=page.bottom.html}{/if}
+        </div>
+    </div>
     <div class="clear"></div>
 </div>
 {include file="footer.html"}

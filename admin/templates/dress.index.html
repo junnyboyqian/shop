@@ -1,0 +1,65 @@
+{include file="header.html"}
+<div id="rightTop">
+    <p>形象目录</p>
+    <ul class="subnav">
+        <li><span>管理</span></li>
+        <li><a class="btn1" href="index.php?app=dress&amp;act=add">新增</a></li>
+    </ul>
+</div>
+<div class="mrightTop">
+    <div class="fontl">
+        <form method="get">
+             <div class="left">
+                <input type="hidden" name="app" value="dress" />
+                <input type="hidden" name="act" value="index" />
+                形象名称:<input class="queryInput" type="text" name="dress_name" value="{$query.dress_name|escape}" />
+                <input type="submit" class="formbtn" value="{$lang.query}" />
+            </div>
+            <!--{if $filtered}-->
+            <a class="left formbtn1" href="index.php?app=dress">{$lang.cancel_query}</a>
+            <!--{/if}-->
+        </form>
+    </div>
+    <div class="fontr">
+        {if $pros}{include file=page.top.html}{/if}
+    </div>
+</div>
+<div class="tdare">
+    <table width="100%" cellspacing="0" class="dataTable">
+        <!--{if $pros}-->
+        <tr class="tatr1">
+            <td width="20" class="firstCell"><input type="checkbox" class="checkall" /></td>
+            <td align="left" class="table-center"><span ectype="dress_name" fieldname="dress_name">名称</span></td>
+            <td align="left" class="table-center">分类</td>
+            <td align="left" class="table-center"><span ectype="sort_order" fieldname="sort_order">排序</span></td>
+            <td align="left" class="table-center">图片</td>
+            <td align="left" class="table-center">添加时间</td>
+            <td class="handler">操作</td>
+        </tr>
+        <!--{/if}-->
+        <!--{foreach from=$pros item=ad}-->
+        <tr class="tatr2">
+            <td class="firstCell"><input value="{$ad.image_id}" class='checkitem' type="checkbox" /></td>
+            <td align="left" class="table-center"><span class="editable" ectype="inline_edit" fieldname="dress_name" fieldid="{$ad.image_id}" required="1">{$ad.dress_name}<span></td>
+            <td align="left" class="table-center">{$ad.cate}</td>
+            <td align="left" class="table-center"><span class="editable" ectype="inline_edit" fieldname="sort_order" fieldid="{$ad.image_id}" required="1">{$ad.sort_order}<span></td>
+            <td align="left" class="table-center">{if $ad.image_url}<img src="{$ad.image_url}" width="50" height="70"/>{/if}</td>
+            <td style="width:200px;" align="left" class="table-center">{$ad.add_time|date:complete}</td>
+            <td class="handler">
+            <a href="index.php?app=dress&amp;act=edit&amp;id={$ad.image_id}">编辑</a>  |<a name="drop" href="javascript:drop_confirm('确定删除吗？', 'index.php?app=dress&amp;act=drop&amp;id={$ad.image_id}');">删除</a>
+            </td>
+        </tr>
+        <!--{foreachelse}-->
+        <tr class="no_data">
+            <td colspan="7">无图片记录</td>
+        </tr>
+        <!--{/foreach}-->
+    </table>
+    <div id="dataFuncs">
+        <div class="pageLinks">
+            {if $pros}{include file=page.bottom.html}{/if}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+{include file="footer.html"}

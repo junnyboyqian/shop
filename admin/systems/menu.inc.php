@@ -34,10 +34,10 @@ return array(
                 'text'  => '产品专辑',
                 'url'   => 'index.php?app=product',
             ),
-            'dealer' => array(
+           /* 'dealer' => array(
                 'text'  => '经销商管理',
                 'url'   => 'index.php?app=dealer',
-            ),
+            ),*/
             'download' => array(
                 'text'  => '下载管理',
                 'url'   => 'index.php?app=download',
@@ -104,7 +104,7 @@ return array(
         ),
     ),*/
     // 商品
-    'goods' => array(
+    /*'goods' => array(
         'text'      => '产品',
         'default'   => 'goods_manage',
         'children'  => array(
@@ -116,20 +116,20 @@ return array(
                 'text'  => '轮播图管理',
                 'url'   => 'index.php?app=ad',
             ),
-            /*'brand' => array(
+            'brand' => array(
                 'text'  => Lang::get('brand'),
                 'url'   => 'index.php?app=brand',
-            ),*/
+            ),
             'goods_manage' => array(
                 'text'  => '产品专辑',
                 'url'   => 'index.php?app=goods',
             ),
-            /*'recommend_type' => array(
+            'recommend_type' => array(
                 'text'  => LANG::get('recommend_type'),
                 'url'   => 'index.php?app=recommend'
-            ),*/
+            ),
         ),
-    ),
+    ),*/
     // 店铺
     /*'store'     => array(
         'text'      => Lang::get('store'),
@@ -150,7 +150,7 @@ return array(
         ),
     ),*/
     // 会员
-    'user' => array(
+    /*'user' => array(
         'text'      => Lang::get('user'),
         'default'   => 'user_manage',
         'children'  => array(
@@ -162,16 +162,16 @@ return array(
                 'text' => Lang::get('admin_manage'),
                  'url'   => 'index.php?app=admin',
              ),
-             /*'user_notice' => array(
+             'user_notice' => array(
                 'text' => Lang::get('user_notice'),
                 'url'  => 'index.php?app=notice',
-             ),*/
-			 /*'user_card' => array(
+             ),
+			 'user_card' => array(
 				'text'	=>'身份证审核',
 				'url'	=> 'index.php?app=card',
-			 ),*/
+			 ),
         ),
-    ),
+    ),*/
     // 交易
     /*'trade' => array(
         'text'      => Lang::get('trade'),
@@ -184,7 +184,7 @@ return array(
         ),
     ),*/
     // 网站
-    'website' => array(
+    /*'website' => array(
         'text'      => Lang::get('website'),
         'default'   => 'acategory',
         'children'  => array(
@@ -204,7 +204,7 @@ return array(
                 'text'  => Lang::get('navigation'),
                 'url'   => 'index.php?app=navigation',
             ),
-            /*'db' => array(
+            'db' => array(
                 'text'  => Lang::get('db'),
                 'url'   => 'index.php?app=db&amp;act=backup',
             ),
@@ -215,7 +215,7 @@ return array(
             'consulting' => array(
                 'text'  =>  LANG::get('consulting'),
                 'url'   => 'index.php?app=consulting',
-            ),*/
+            ),
             'share_link' => array(
                 'text'  =>  LANG::get('share_link'),
                 'url'   => 'index.php?app=share',
@@ -225,7 +225,7 @@ return array(
                 'url'   => 'index.php?app=region',
             ),
         ),
-    ),
+    ),*/
     // 扩展
     /*'extend' => array(
         'text'      => Lang::get('extend'),

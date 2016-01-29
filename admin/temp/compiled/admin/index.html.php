@@ -40,7 +40,7 @@ var menu = <?php echo $this->_var['menu_json']; ?>;
     <div id="menu"><span>您好，<strong><?php echo $this->_var['visitor']['user_name']; ?></strong> <a href="index.php?act=logout">[退出]</a> <!-- <a href="<?php echo $this->_var['site_url']; ?>/index.php" target="_blank">[商城首页]</a> --></span>
     <a href="javascript:;" class="menu_btn1" id="iframe_refresh">刷新</a>
     <!-- <a href="javascript:;" class="menu_btn2" id="clear_cache">更新缓存</a> -->
-    <a href="#" id="back_btn"><img src="templates/style/images/tiring_room_nav.gif" /></a>
+    <!-- <a href="#" id="back_btn"><img src="templates/style/images/tiring_room_nav.gif" /></a> -->
     </div>
     <ul id="nav">
     </ul>

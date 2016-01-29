@@ -31,7 +31,7 @@ class AdApp extends BackendApp
     function index()
     {
         //更新排序
-        $sort  = 'ad_id';
+        $sort  = 'sort_order';
         $order = 'desc';
         $ads = $this->_ad_mod->find(array(
         'order'         => "$sort $order",
@@ -39,7 +39,7 @@ class AdApp extends BackendApp
         ));
         foreach ($ads as $key => $ad)
         {
-            $ad['ad_img']&&$ads[$key]['ad_img'] = dirname(site_url()) . '/' . $ad['ad_img'];
+            $ad['ad_img']&&$ads[$key]['ad_img'] = site_url() . '/' . $ad['ad_img'];
         }
         /* 导入jQuery的表单验证插件 */
         $this->import_resource(array(
@@ -70,7 +70,7 @@ class AdApp extends BackendApp
             $data = array();
             $data['ad_name']     = $_POST['ad_name'];
             $data['link']     = $_POST['link'];
-            $data['position']     = $_POST['position'];
+            $data['sort_order']     = $_POST['sort_order'];
             $data['add_time'] = time();
             if (!$ad_id = $this->_ad_mod->add($data))  //获取ad_id
             {
@@ -87,8 +87,8 @@ class AdApp extends BackendApp
             }
             $adimg && $this->_ad_mod->edit($ad_id, array('ad_img' => $adimg)); //将adimg地址记下
             $this->show_message('添加成功！',
-                'back_list',    'index.php?app=ad',
-                'continue_add', 'index.php?app=ad&amp;act=add'
+                '返回列表',    'index.php?app=ad',
+                '继续添加', 'index.php?app=ad&amp;act=add'
             );
         }
     }
@@ -104,7 +104,7 @@ class AdApp extends BackendApp
         $ad_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
         if (!$ad_id)
         {
-            $this->show_warning('no_such_ad');
+            $this->show_warning('没有该轮播图');
             return;
         }
          if (!IS_POST)
@@ -112,14 +112,14 @@ class AdApp extends BackendApp
             $find_data     = $this->_ad_mod->find($ad_id);
             if (empty($find_data))
             {
-                $this->show_warning('no_such_ad');
+                $this->show_warning('没有该轮播图');
 
                 return;
             }
             $ad    =   current($find_data);
             if ($ad['ad_img'])
             {
-                $ad['ad_img']  =   dirname(site_url()) . "/" . $ad['ad_img'];
+                $ad['ad_img']  =   site_url() . "/" . $ad['ad_img'];
             }
             $this->import_resource(array(
                 'script' => 'jquery.plugins/jquery.validate.js'
@@ -132,7 +132,7 @@ class AdApp extends BackendApp
             $data = array();
             $data['ad_name']     =   $_POST['ad_name'];
             $data['link']     =   $_POST['link'];
-            $data['position'] = $_POST['position'];
+            $data['sort_order'] = $_POST['sort_order'];
             $adimg               =   $this->_upload_adimg($ad_id);
             $adimg && $data['ad_img'] = $adimg;
             if ($adimg === false)
@@ -147,9 +147,9 @@ class AdApp extends BackendApp
                 return;
             }
 
-            $this->show_message('edit_ad_successed',
-                'back_list',        'index.php?app=ad',
-                'edit_again',    'index.php?app=ad&amp;act=edit&amp;id=' . $ad_id);
+            $this->show_message('修改成功',
+                '返回列表',        'index.php?app=ad',
+                '继续修改',    'index.php?app=ad&amp;act=edit&amp;id=' . $ad_id);
         }
     }  
 
@@ -181,7 +181,7 @@ class AdApp extends BackendApp
        $value  = isset($_GET['value']) ? trim($_GET['value']) : '';
        $data   = array();
 
-       if (in_array($column ,array('ad_name','position', 'link')))
+       if (in_array($column ,array('ad_name','sort_order', 'link')))
        {
            $data[$column] = $value;
            $this->_ad_mod->edit($id, $data);

@@ -20,7 +20,7 @@ $(function(){
         },
         messages : {
             ad_name : {
-                required : '广告名称不能为空',
+                required : '产品名称不能为空',
             },
             ad_img : {
                 accept : 'limit_img'
@@ -44,6 +44,16 @@ $(function(){
 <div class="info">
     <form method="post" enctype="multipart/form-data" id="ad_form">
         <table class="infoTable">
+            <tr>
+                <th class="paddingT15">
+                    <label for="cate_id">分类:</label></th>
+                <td class="paddingT15 wordSpacing5">
+                    <select id="cate_id" name="cate_id">
+                    <option value="0">请选择...</option>
+                    <?php echo $this->html_options(array('options'=>$this->_var['cates'],'selected'=>$this->_var['product']['cate_id'])); ?>
+                    </select> 
+                    <label class="field_notice">分类</label></td>
+            </tr>
             <tr>
                 <th class="paddingT15">
                     产品名称:</th>

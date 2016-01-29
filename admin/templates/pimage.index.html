@@ -1,0 +1,37 @@
+{include file="header.html"}
+<div id="rightTop">
+    <p>产品图</p>
+    <ul class="subnav">
+        <li><span>管理</span></li>
+        <li><a class="btn1" href="index.php?app=pimage&amp;act=add&amp;pro_id={$smarty.get.id}">新增</a></li>
+        <li><a class="btn1" href="index.php?app=product&amp;act=index">返回</a></li>
+    </ul>
+</div>
+<div class="tdare">
+    <table width="100%" cellspacing="0" class="dataTable">
+        <!--{if $pros}-->
+        <tr class="tatr1">
+            <td width="20" class="firstCell"><input type="checkbox" class="checkall" /></td>
+            <td align="left" class="table-center">图片</td>
+            <td align="left"><span ectype="sort_order" fieldname="sort_order">排序</span></td>
+            <td class="handler">操作</td>
+        </tr>
+        <!--{/if}-->
+        <!--{foreach from=$pros item=ad}-->
+        <tr class="tatr2">
+            <td class="firstCell"><input value="{$ad.image_id}" class='checkitem' type="checkbox" /></td>
+            <td align="left" class="table-center">{if $ad.image_url}<img src="{$ad.image_url}" width="200" height="200"/>{/if}</td>
+            <td align="left"><span class="editable" ectype="inline_edit" fieldname="sort_order" fieldid="{$ad.image_id}" required="1">{$ad.sort_order}<span></td>
+            <td class="handler">
+            <a name="drop" href="javascript:drop_confirm('确定删除吗？', 'index.php?app=pimage&amp;act=drop&amp;id={$ad.image_id}');">删除</a>
+            </td>
+        </tr>
+        <!--{foreachelse}-->
+        <tr class="no_data">
+            <td colspan="7">未上传图片</td>
+        </tr>
+        <!--{/foreach}-->
+    </table>
+    <div class="clear"></div>
+</div>
+{include file="footer.html"}

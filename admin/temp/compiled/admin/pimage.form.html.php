@@ -11,12 +11,12 @@ $(function(){
         },
         onkeyup    : false,
         rules : {
-            ad_img : {
+            pro_img : {
                 accept  : 'gif|png|jpe?g'
             }
         },
         messages : {
-            ad_img : {
+            pro_img : {
                 accept : 'limit_img'
             }
         }
@@ -24,11 +24,11 @@ $(function(){
 });
 </script>
 <div id="rightTop">
-    <p>轮播图</p>
+    <p>产品图</p>
     <ul class="subnav">
-        <li><a class="btn1" href="index.php?app=ad">管理</a></li>
-        <?php if ($this->_var['ad']['ad_id']): ?>
-        <li><a class="btn1" href="index.php?app=ad&amp;act=add">新增</a></li>
+        <li><a class="btn1" href="index.php?app=pimage&amp;id=<?php echo $_GET['pro_id']; ?>">管理</a></li>
+        <?php if ($this->_var['pimage']['image_id']): ?>
+        <li><a class="btn1" href="index.php?app=pimage&amp;act=add">新增</a></li>
         <?php else: ?>
         <li><span>新增</span></li>
         <?php endif; ?>
@@ -40,32 +40,18 @@ $(function(){
         <table class="infoTable">
             <tr>
                 <th class="paddingT15">
-                    名称:</th>
+                    产品图片:</th>
                 <td class="paddingT15 wordSpacing5">
-                    <input class="infoTableInput2" id="ad_name" type="text" name="ad_name" value="<?php echo htmlspecialchars($this->_var['ad']['ad_name']); ?>" /> <label class="field_notice">名称</label>
+                    <input class="infoTableFile2" id="pro_img" type="file" name="pro_img" />
+                    <label class="field_notice">limit_img</label>
                 </td>
             </tr>
-            <tr>
-                <th class="paddingT15">
-                    链接:</th>
-                <td class="paddingT15 wordSpacing5">
-                    <input class="infoTableInput2" id="link" type="text" name="link" value="<?php echo htmlspecialchars($this->_var['ad']['link']); ?>" /> <label class="field_notice">链接</label>
-                </td>
-            </tr>
-            <tr>
-                <th class="paddingT15">
-                    图片:</th>
-                <td class="paddingT15 wordSpacing5">
-                    <input class="infoTableFile2" id="ad_img" type="file" name="ad_img" />
-                    <label class="field_notice">规格: 1600 * 950</label>
-                </td>
-            </tr>
-            <?php if ($this->_var['ad']['ad_img']): ?>
+            <?php if ($this->_var['pimage']['image_url']): ?>
             <tr>
                 <th class="paddingT15">
                 </th>
                 <td class="paddingT15 wordSpacing5">
-                <img src="<?php echo $this->_var['ad']['ad_img']; ?>" class="makesmall" max_width="352" max_height="162" />
+                <img src="<?php echo $this->_var['pimage']['image_url']; ?>" class="makesmall" max_width="352" max_height="162" />
                 </td>
             </tr>
             <?php endif; ?>
@@ -73,7 +59,7 @@ $(function(){
                 <th class="paddingT15">
                     排序:</th>
                 <td class="paddingT15 wordSpacing5">
-                    <input class="infoTableInput2" id="sort_order" type="text" name="sort_order" value="<?php echo $this->_var['ad']['sort_order']; ?>" /> <label class="field_notice">数值越大 排序越靠前</label>
+                    <input class="infoTableInput2" id="sort_order" type="text" name="sort_order" value="<?php echo $this->_var['pimage']['sort_order']; ?>" /> <label class="field_notice">排序值越大 越靠前</label>
                 </td>
             </tr>
         <tr>

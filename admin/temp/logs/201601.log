@@ -112,3 +112,7 @@ Tue, 26 Jan 2016 08:39:10 +0000	[2]mysql_fetch_array() expects parameter 1 to be
 Tue, 26 Jan 2016 08:55:26 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
 Tue, 26 Jan 2016 09:51:56 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
 Tue, 26 Jan 2016 09:56:01 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Wed, 27 Jan 2016 09:12:10 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Thu, 28 Jan 2016 07:51:45 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Thu, 28 Jan 2016 08:42:23 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
+Thu, 28 Jan 2016 09:28:03 +0000	[2]mysql_fetch_array() expects parameter 1 to be resource, boolean given	\eccore\model\mysql.php	225
